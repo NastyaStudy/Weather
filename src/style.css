@@ -1,0 +1,65 @@
+.w-50{
+   margin: 100px auto; 
+   
+ }
+
+.main {
+ border: 2px solid #A2A8D3;
+ border-radius: 6px;
+ background-image:url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/620/original/old-gray-cement-wall-backgrounds_34552-325.jpg?1663692991)
+ }
+
+
+.current-city, .current-value{
+    text-align: right;
+}
+
+.current-city{
+    font-size: 50px;
+}
+
+
+.forecast{
+    border: 1px solid #A2A8D3;
+    border-radius: 5px;
+}
+
+button{
+    border: none;
+   padding-left: 0px;
+       }
+
+.current-img{
+    padding-bottom: 30px;
+}
+       
+.current-temperature{
+    font-size: 60px;
+}
+
+.metric-imperial{
+    position: relative;
+    top: -30px
+}
+
+li{
+list-style: none;
+}
+
+form{
+    max-width: 400px;
+}
+
+#metric, #imperial{
+    text-decoration: none;
+}
+.metric-imperial .active{
+cursor: default;
+    color: black;
+}
+
+  
+
+#metric:hover{
+    color: black;
+}
