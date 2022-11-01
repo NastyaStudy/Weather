@@ -78,8 +78,7 @@ function showTemperature(response){
   
     let currentImg = document.querySelector(".current-img");
     let currentSky = response.data.weather[0].id;
-   console.log(response.data.weather[0].id);
-   if(whatPartOfDay){
+     if(whatPartOfDay){
     if(currentSky === 800) {  
     currentImg.setAttribute("src", `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/606/original/weather10.png?1663690328`);
     }
