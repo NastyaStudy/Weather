@@ -14,9 +14,11 @@
     text-align: right;
 }
 
+
 .current-city{
-    font-size: 50px;
-}
+    padding-top: 20px;
+    font-size: 30px;
+    }
 
 
 .forecast{

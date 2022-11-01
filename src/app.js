@@ -61,6 +61,13 @@ function toMetric(event){
     temperatureElement.innerHTML= Math.round(currenMetric);
 }
 
+function fromCoord(coordinates){
+   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
+   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+
+}
+
 function showTemperature(response){
     let currentTemperature = document.querySelector(".current-temperature");
     let feelsLike= document.querySelector(".feels-like");
@@ -75,10 +82,12 @@ function showTemperature(response){
     humidity.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)}%`;
     feelsLike.innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}°C`;
     currentTemperature.innerHTML = `${Math.round(currenMetric)}`;
+
+    fromCoord(response.data.coord);
   
     let currentImg = document.querySelector(".current-img");
     let currentSky = response.data.weather[0].id;
-     if(whatPartOfDay){
+    if(whatPartOfDay){
     if(currentSky === 800) {  
     currentImg.setAttribute("src", `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/606/original/weather10.png?1663690328`);
     }
@@ -126,6 +135,8 @@ function showTemperature(response){
     if(currentSky === 502 || currentSky === 503 || currentSky === 504 || currentSky === 521 || currentSky === 522 || currentSky === 531 || currentSky === 302 || currentSky === 312 || currentSky === 314 || currentSky === 321) {  
     currentImg.setAttribute("src", `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/597/original/weather5.png?1663681630`);
     }
+
+
    }
 
 let currenMetric = null;
