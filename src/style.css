@@ -63,3 +63,8 @@ cursor: default;
 #metric:hover{
     color: black;
 }
+
+.forecast:hover, .hourly-forecast:hover{
+    font-weight: bolder;
+    cursor: pointer;
+}
