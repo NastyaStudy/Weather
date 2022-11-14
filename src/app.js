@@ -87,16 +87,20 @@ function showTemperature(response){
   
     let currentImg = document.querySelector(".current-img");
     let currentSky = response.data.weather[0].id;
-    if(whatPartOfDay){
+    if(whatPartOfDay()){
+
     if(currentSky === 800) {  
     currentImg.setAttribute("src", `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/606/original/weather10.png?1663690328`);
     }
+
     if(currentSky === 701 || currentSky === 711 || currentSky === 721 || currentSky === 731 || currentSky === 741 || currentSky === 751 || currentSky === 761 || currentSky === 762 || currentSky === 771 || currentSky === 781) {  
     currentImg.setAttribute("src", `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/606/original/weather10.png?1663690328`);
     }
+
     if(currentSky === 801 || currentSky === 802){
        currentImg.setAttribute("src", `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/608/original/weather1.png?1663690654`);
     }
+
     else {
         if(currentSky === 800) {  
     currentImg.setAttribute("src", `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/607/original/weather11.png?1663690350`);
@@ -164,13 +168,16 @@ axios.get(apiUrl).then(showTemperature);
 axios.get(apiUrl).then(showTemperature);
  }
 
+ 
  function whatPartOfDay(){
- let currentPartOfDay;
-  if( currentHour > "22" && currentHour < "6"){
-    currentPartOfDay = "night";
+  let night = (currentHour >= "22") || (currentHour <= "6");
+//   let day = (currentHour < "22") && (currentHour > "6");
+    if(night){
     return false;
   }
-  else{ currentPartOfDay = "day";
-return true;
+//   if(day){
+//     return true;
+//   }
 }
-}
+let partDay = whatPartOfDay();
+console.log(whatPartOfDay());
