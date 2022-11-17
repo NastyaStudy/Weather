@@ -20,18 +20,11 @@
         <div class="row row-cols-2 top-inform">
           <div class="col">
             <img src="" width="50" class="current-img" />
-
             <span class="current-temperature"> <strong></strong></span
-            ><span class="metric-imperial"
-              ><a href="" id="metric" class="active">°C</a>|<a
-                href=""
-                id="imperial"
-                >°F</a
-              ></span
-            >
+            ><span class="metric">°C</span>
           </div>
           <div class="col current-city"></div>
-          <div class="col">
+          <div class="col" id="current-parameter">
             <ul>
               <li class="feels-like"></li>
               <li class="humidity"></li>
@@ -54,8 +47,9 @@
                 type="search"
                 placeholder="Enter a city"
                 class="input-city"
+                id="search"
               />
-              <input type="submit" value="Change" />
+              <input type="submit" value="Change" id="search" />
 
               <button class="current-geolocation">
                 <img
@@ -66,104 +60,7 @@
             </form>
           </div>
         </div>
-        <div class="row text-center hours">
-          <div class="col hourly-forecast">
-            Fri <br />
-            20:00 <br />
-            14°C <br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/597/original/weather5.png?1663681630"
-              width="40"
-            />
-          </div>
-          <div class="col hourly-forecast">
-            Fri <br />
-            21:00 <br />
-            14°C <br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/597/original/weather5.png?1663681630"
-              width="40"
-            />
-          </div>
-          <div class="col hourly-forecast">
-            Fri <br />
-            22:00 <br />
-            14°C <br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/605/original/weather8.png?1663689746"
-              width="40"
-            />
-          </div>
-          <div class="col hourly-forecast">
-            Fri <br />
-            23:00 <br />
-            14°C <br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/605/original/weather8.png?1663689746"
-              width="40"
-            />
-          </div>
-          <div class="col hourly-forecast">
-            Sat <br />
-            0:00 <br />
-            14°C <br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/599/original/weather2.png?1663681648"
-              width="40"
-            />
-          </div>
-          <div class="col hourly-forecast">
-            Sat <br />
-            1:00 <br />
-            14°C <br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/599/original/weather2.png?1663681648"
-              width="40"
-            />
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col forecast">
-            Saturday <br />
-            17.09.2022 <br />
-            <span class="temperature-max">14°C </span>|<span
-              class="temperature-min"
-            >
-              10°C</span
-            ><br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/605/original/weather8.png?1663689746"
-              width="40"
-            />
-          </div>
-          <div class="col forecast">
-            Sunday <br />
-            18.09.2022 <br />
-            14°C | <span class="temperature-min"> 10°C</span> <br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/605/original/weather8.png?1663689746"
-              width="40"
-            />
-          </div>
-          <div class="col forecast">
-            Monday <br />
-            19.09.2022 <br />
-            12°C | <span class="temperature-min"> 10°C</span><br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/605/original/weather8.png?1663689746"
-              width="40"
-            />
-          </div>
-          <div class="col forecast">
-            Tuesday <br />
-            20.09.2022 <br />
-            10°C | <span class="temperature-min"> 10°C</span><br />
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/605/original/weather8.png?1663689746"
-              width="40"
-            />
-          </div>
-        </div>
+        <div class="" id="forecast"></div>
       </div>
 
       <small

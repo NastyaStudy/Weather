@@ -6,11 +6,13 @@
 .main {
  border: 2px solid #A2A8D3;
  border-radius: 6px;
- background-image:url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/620/original/old-gray-cement-wall-backgrounds_34552-325.jpg?1663692991)
- }
+ background-image:url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/620/original/old-gray-cement-wall-backgrounds_34552-325.jpg?1663692991);
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ color: #22559c;
+}
 
 
-.current-city, .current-value{
+.current-city{
     text-align: right;
 }
 
@@ -20,10 +22,33 @@
     font-size: 30px;
     }
 
+#current-parameter{
+    margin-top: -20px;
+    margin-left: -30px;
+}
+
+.current-value{
+    margin-left: 170px;
+    margin-top: -40px;
+    width: 20%;
+}
+
+.country{
+    text-align: center;
+    margin-right: -40px;
+    font-size: large;
+    font-weight: bolder;
+}
 
 .forecast{
     border: 1px solid #A2A8D3;
     border-radius: 5px;
+}
+
+#search{
+    border: 1px solid #A2A8D3;
+    border-radius: 6px;
+    color: #22559c;
 }
 
 button{
@@ -39,7 +64,7 @@ button{
     font-size: 60px;
 }
 
-.metric-imperial{
+.metric{
     position: relative;
     top: -30px
 }
@@ -50,18 +75,6 @@ list-style: none;
 
 form{
     max-width: 400px;
-}
-
-#metric, #imperial{
-    text-decoration: none;
-}
-.metric-imperial .active{
-cursor: default;
-    color: black;
-}
-
-#metric:hover{
-    color: black;
 }
 
 .forecast:hover, .hourly-forecast:hover{
